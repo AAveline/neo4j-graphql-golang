@@ -1,0 +1,21 @@
+CREATE 
+(
+:Person {
+  "name": "Yoanna",
+  "id": 1,
+  "role": "Larbin",
+}),
+(
+:Person {
+  "name": "Aymeric",
+  "role": "Boss",
+  "id": 2,
+    }
+),
+(
+:Activity {
+    id: 5,
+    name: "Glandouille"
+})
+
+MERGE (:Person {name: "Yoanna"})-[:HAS_ACTIVITY]->(:Activity {name: "Glandouille"})
